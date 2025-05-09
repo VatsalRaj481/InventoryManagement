@@ -1,0 +1,13 @@
+package com.inventory.repository; 
+
+import com.inventory.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    // No extra methods needed for basic CRUD
+	boolean existsByName(String name);
+}
+
+
